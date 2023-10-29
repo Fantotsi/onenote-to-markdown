@@ -42,7 +42,7 @@ function handlePage($page, $path, $assets_path, $i) {
 
         # Replace image links with the right path
         Write-Host Fixing image links
-        $LINK_REGEX = '!\[[^\]]*\]\(media\/image((.*?)\.(.*?))?(?=\"|\))(?<optionalpart>\".*\")?\)(\{.*\})?'
+        $LINK_REGEX = '!\[[^\]]*\]\(zzz_attachments\' + $pagename + '/IMG((.*?)\.(.*?))?(?=\"|\))(?<optionalpart>\".*\")?\)(\{.*\})?'
         $path_md2 = -join($path_md, "2")
         $prefix = -join($pagename, "_")
         $hello = (Get-Content -encoding utf8 $path_md) `
